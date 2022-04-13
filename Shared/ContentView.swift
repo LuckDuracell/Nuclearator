@@ -55,7 +55,7 @@ struct ContentView: View {
                     .frame(width: UIScreen.main.bounds.width * 0.95, height: 350, alignment: .center)
                     .cornerRadius(25)
                     .overlay(
-                        Color.orange.opacity(outputSafety(input: CGFloat(output), mapSpan: region.span) ? 0.8 : 0)
+                        Color.orange.opacity(outputSafety(input: CGFloat(output), mapSpan: region.span, circleLot: MapLocations[0], region: region) ? 0.8 : 0)
                             .cornerRadius(25)
                             .allowsHitTesting(false)
                     )
@@ -70,6 +70,20 @@ struct ContentView: View {
                     Text("Calculate")
                         .padding()
                 }
+//                if UIDevice.current.userInterfaceIdiom == .phone {
+//                    Button {
+//                        guard let urlShare = URL(string: "https://apps.apple.com/us/app/watchable/id1586489845") else { return }
+//                               let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+//                        activityVC.title = "Share the app with your friends!"
+//
+//                        UIApplication.shared.windows.first?.rootViewController?
+//                            .present(activityVC, animated: true, completion: nil)
+//
+//                    } label: {
+//                        Text("Share App")
+//                            .padding()
+//                    }
+//                }
             
         }.toolbar(content: {
             ToolbarItemGroup(placement: .keyboard, content: {
@@ -112,11 +126,18 @@ func scaleExplosion(input: CGFloat, mapSpan: MKCoordinateSpan) -> CGFloat {
     return output
 }
 
-func outputSafety(input: CGFloat, mapSpan: MKCoordinateSpan) -> Bool {
-    var output = CGFloat((4.5 / mapSpan.latitudeDelta ) * 350 * (input / 1240) * 2)
+func outputSafety(input: CGFloat, mapSpan: MKCoordinateSpan, circleLot: MapLocation, region: MKCoordinateRegion) -> Bool {
+    let output = CGFloat((4.5 / mapSpan.latitudeDelta ) * 350 * (input / 1240) * 2)
     var theBool = false
     if output > UIScreen.main.bounds.width * 5 {
         theBool = true
     }
+    
+    let circle = CLLocation(latitude: circleLot.latitude, longitude: circleLot.longitude)
+    let position = CLLocation(latitude: region.center.latitude, longitude: region.center.longitude)
+    if (circle.distance(from: position) / 250) > (output * 0.5) {
+        theBool = false
+    }
+    
     return theBool
 }
