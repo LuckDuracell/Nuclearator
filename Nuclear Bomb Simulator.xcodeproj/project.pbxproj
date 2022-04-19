@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A473AF3280EB4D5002C1CE7 /* ShowBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A473AF2280EB4D5002C1CE7 /* ShowBoom.swift */; };
+		0A473AF4280EB4D5002C1CE7 /* ShowBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A473AF2280EB4D5002C1CE7 /* ShowBoom.swift */; };
 		0AE846D927F50BEB004637C5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE846D827F50BEB004637C5 /* Tests_iOS.swift */; };
 		0AE846DB27F50BEB004637C5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE846DA27F50BEB004637C5 /* Tests_iOSLaunchTests.swift */; };
 		0AE846E527F50BEB004637C5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE846E427F50BEB004637C5 /* Tests_macOS.swift */; };
@@ -17,6 +19,8 @@
 		0AE846EB27F50BEB004637C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE846C127F50BE9004637C5 /* ContentView.swift */; };
 		0AE846EC27F50BEB004637C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE846C227F50BEB004637C5 /* Assets.xcassets */; };
 		0AE846ED27F50BEB004637C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE846C227F50BEB004637C5 /* Assets.xcassets */; };
+		0AF07A122809DEC10057333A /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF07A112809DEC10057333A /* Background.swift */; };
+		0AF07A132809DEC10057333A /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF07A112809DEC10057333A /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A473AF2280EB4D5002C1CE7 /* ShowBoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBoom.swift; sourceTree = "<group>"; };
 		0AE846C027F50BE9004637C5 /* NuclearatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuclearatorApp.swift; sourceTree = "<group>"; };
 		0AE846C127F50BE9004637C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AE846C227F50BEB004637C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		0AE846E027F50BEB004637C5 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE846E427F50BEB004637C5 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		0AE846E627F50BEB004637C5 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		0AF07A112809DEC10057333A /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 			children = (
 				0AE846C027F50BE9004637C5 /* NuclearatorApp.swift */,
 				0AE846C127F50BE9004637C5 /* ContentView.swift */,
+				0A473AF2280EB4D5002C1CE7 /* ShowBoom.swift */,
+				0AF07A112809DEC10057333A /* Background.swift */,
 				0AE846C227F50BEB004637C5 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -301,6 +309,8 @@
 			files = (
 				0AE846EA27F50BEB004637C5 /* ContentView.swift in Sources */,
 				0AE846E827F50BEB004637C5 /* NuclearatorApp.swift in Sources */,
+				0AF07A122809DEC10057333A /* Background.swift in Sources */,
+				0A473AF3280EB4D5002C1CE7 /* ShowBoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +320,8 @@
 			files = (
 				0AE846EB27F50BEB004637C5 /* ContentView.swift in Sources */,
 				0AE846E927F50BEB004637C5 /* NuclearatorApp.swift in Sources */,
+				0AF07A132809DEC10057333A /* Background.swift in Sources */,
+				0A473AF4280EB4D5002C1CE7 /* ShowBoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 190;
+				CURRENT_PROJECT_VERSION = 400;
 				DEVELOPMENT_TEAM = RV78ENMXZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -476,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = luckdev.nukeit;
 				PRODUCT_NAME = Nuclearlator;
 				SDKROOT = iphoneos;
@@ -492,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 190;
+				CURRENT_PROJECT_VERSION = 400;
 				DEVELOPMENT_TEAM = RV78ENMXZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -506,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = luckdev.nukeit;
 				PRODUCT_NAME = Nuclearlator;
 				SDKROOT = iphoneos;
