@@ -61,7 +61,7 @@ struct ContentView: View {
                 }
                     .padding(.horizontal)
                 if showDisclaimer {
-                    Text("Disclaimer: I don't condune dropping nuclear weapons... ever. That would be really messed up, this is just a project for Physics class")
+                    Text("Disclaimer: I don't condone dropping nuclear weapons... ever. That would be really messed up, this is just a project for Physics class")
                         .padding(.horizontal)
                         .foregroundColor(fancyTheme ? .white : .primary)
                 }
